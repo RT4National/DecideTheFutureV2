@@ -1,0 +1,393 @@
+/* Auto-generated sprites!
+ * To add company logo:
+ * 1. Create a 96px ⨉ 96px png of the new logo
+ * 2. Upload it and all the rest of them to https://draeton.github.io/stitches/
+ * 3. Change "Style prefix" setting to "logo"; "Padding" setting to 0
+ * 4. Download the png and the stylesheet
+ * 5. Rename the png to companies-logos@2x.png
+ * 6. Resize by 50% and save as companies-logos.png
+ * 7. Copy company-specific style declarations, paste them below the line
+ * */
+.logo {
+    background-repeat: no-repeat;
+    background-size: 192px 192px;
+    display: block;
+}
+
+@media screen and (-webkit-max-device-pixel-ratio: 1.49), (max-resolution: 143.9dpi), (max-resolution: 1.5dppx) {
+    .logo {
+        background-image: url('/images/companies/companies-logos.png');
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.49dppx) {
+    .logo {
+        background-image: url('/images/companies/companies-logos@2x.png');
+    }
+}
+
+@media screen and (min-width: 480px) {
+    .logo {
+        background-size: 288px 288px;
+    }
+}
+
+.logo.logo-adobe {
+    background-position: 0 0;
+}
+
+@media screen and (min-width: 480px) {
+    .logo.logo-adobe {
+        background-position: 0 0;
+    }
+}
+
+.logo.logo-amazon {
+    background-position: -32px 0;
+}
+
+@media screen and (min-width: 480px) {
+    .logo.logo-amazon {
+        background-position: -48px 0;
+    }
+}
+
+.logo.logo-apple {
+    background-position: -64px 0;
+}
+
+@media screen and (min-width: 480px) {
+    .logo.logo-apple {
+        background-position: -96px 0;
+    }
+}
+
+.logo.logo-att {
+    background-position: -96px 0;
+}
+
+@media screen and (min-width: 480px) {
+    .logo.logo-att {
+        background-position: -144px 0;
+    }
+}
+
+.logo.logo-automattic {
+    background-position: -128px 0;
+}
+
+@media screen and (min-width: 480px) {
+    .logo.logo-automattic {
+        background-position: -192px 0;
+    }
+}
+
+.logo.logo-cisco {
+    background-position: -160px 0;
+}
+
+@media screen and (min-width: 480px) {
+    .logo.logo-cisco {
+        background-position: -240px 0;
+    }
+}
+
+.logo.logo-comcast {
+    background-position: 0 -32px;
+}
+
+@media screen and (min-width: 480px) {
+    .logo.logo-comcast {
+        background-position: 0 -48px;
+    }
+}
+
+.logo.logo-credomobile {
+    background-position: -32px -32px;
+}
+
+@media screen and (min-width: 480px) {
+    .logo.logo-credomobile {
+        background-position: -48px -48px;
+    }
+}
+
+.logo.logo-dell {
+    background-position: -64px -32px;
+}
+
+@media screen and (min-width: 480px) {
+    .logo.logo-dell {
+        background-position: -96px -48px;
+    }
+}
+
+.logo.logo-disconnect {
+    background-position: -96px -32px;
+}
+
+@media screen and (min-width: 480px) {
+    .logo.logo-disconnect {
+        background-position: -144px -48px;
+    }
+}
+
+.logo.logo-dropbox {
+    background-position: -128px -32px;
+}
+
+@media screen and (min-width: 480px) {
+    .logo.logo-dropbox {
+        background-position: -192px -48px;
+    }
+}
+
+.logo.logo-duckduckgo {
+    background-position: -160px -32px;
+}
+
+@media screen and (min-width: 480px) {
+    .logo.logo-duckduckgo {
+        background-position: -240px -48px;
+    }
+}
+
+.logo.logo-ebay {
+    background-position: 0 -64px;
+}
+
+@media screen and (min-width: 480px) {
+    .logo.logo-ebay {
+        background-position: 0 -96px;
+    }
+}
+
+.logo.logo-expedia {
+    background-position: -32px -64px;
+}
+
+@media screen and (min-width: 480px) {
+    .logo.logo-expedia {
+        background-position: -48px -96px;
+    }
+}
+
+.logo.logo-facebook {
+    background-position: -64px -64px;
+}
+
+@media screen and (min-width: 480px) {
+    .logo.logo-facebook {
+        background-position: -96px -96px;
+    }
+}
+
+.logo.logo-google {
+    background-position: -96px -64px;
+}
+
+@media screen and (min-width: 480px) {
+    .logo.logo-google {
+        background-position: -144px -96px;
+    }
+}
+
+.logo.logo-hp {
+    background-position: -128px -64px;
+}
+
+@media screen and (min-width: 480px) {
+    .logo.logo-hp {
+        background-position: -192px -96px;
+    }
+}
+
+.logo.logo-ibm {
+    background-position: -160px -64px;
+}
+
+@media screen and (min-width: 480px) {
+    .logo.logo-ibm {
+        background-position: -240px -96px;
+    }
+}
+
+.logo.logo-intel {
+    background-position: 0 -96px;
+}
+
+@media screen and (min-width: 480px) {
+    .logo.logo-intel {
+        background-position: 0 -144px;
+    }
+}
+
+.logo.logo-linkedin {
+    background-position: -32px -96px;
+}
+
+@media screen and (min-width: 480px) {
+    .logo.logo-linkedin {
+        background-position: -48px -144px;
+    }
+}
+
+.logo.logo-microsoft {
+    background-position: -64px -96px;
+}
+
+@media screen and (min-width: 480px) {
+    .logo.logo-microsoft {
+        background-position: -96px -144px;
+    }
+}
+
+.logo.logo-mozilla {
+    background-position: -96px -96px;
+}
+
+@media screen and (min-width: 480px) {
+    .logo.logo-mozilla {
+        background-position: -144px -144px;
+    }
+}
+
+.logo.logo-netflix {
+    background-position: -128px -96px;
+}
+
+@media screen and (min-width: 480px) {
+    .logo.logo-netflix {
+        background-position: -192px -144px;
+    }
+}
+
+.logo.logo-oracle {
+    background-position: -160px -96px;
+}
+
+@media screen and (min-width: 480px) {
+    .logo.logo-oracle {
+        background-position: -240px -144px;
+    }
+}
+
+.logo.logo-priceline {
+    background-position: 0 -128px;
+}
+
+@media screen and (min-width: 480px) {
+    .logo.logo-priceline {
+        background-position: 0 -192px;
+    }
+}
+
+.logo.logo-privateinternetaccess {
+    background-position: -32px -128px;
+}
+
+@media screen and (min-width: 480px) {
+    .logo.logo-privateinternetaccess {
+        background-position: -48px -192px;
+    }
+}
+
+.logo.logo-reddit {
+    background-position: -64px -128px;
+}
+
+@media screen and (min-width: 480px) {
+    .logo.logo-reddit {
+        background-position: -96px -192px;
+    }
+}
+
+.logo.logo-salesforce {
+    background-position: -96px -128px;
+}
+
+@media screen and (min-width: 480px) {
+    .logo.logo-salesforce {
+        background-position: -144px -192px;
+    }
+}
+
+.logo.logo-t-mobile {
+    background-position: -128px -128px;
+}
+
+@media screen and (min-width: 480px) {
+    .logo.logo-t-mobile {
+        background-position: -192px -192px;
+    }
+}
+
+.logo.logo-twilio {
+    background-position: -160px -128px;
+}
+
+@media screen and (min-width: 480px) {
+    .logo.logo-twilio {
+        background-position: -240px -192px;
+    }
+}
+
+.logo.logo-twitter {
+    background-position: 0 -160px;
+}
+
+@media screen and (min-width: 480px) {
+    .logo.logo-twitter {
+        background-position: 0 -240px;
+    }
+}
+
+.logo.logo-verizon {
+    background-position: -32px -160px;
+}
+
+@media screen and (min-width: 480px) {
+    .logo.logo-verizon {
+        background-position: -48px -240px;
+    }
+}
+
+.logo.logo-wikipedia {
+    background-position: -64px -160px;
+}
+
+@media screen and (min-width: 480px) {
+    .logo.logo-wikipedia {
+        background-position: -96px -240px;
+    }
+}
+
+.logo.logo-xerox {
+    background-position: -96px -160px;
+}
+
+@media screen and (min-width: 480px) {
+    .logo.logo-xerox {
+        background-position: -144px -240px;
+    }
+}
+
+.logo.logo-yahoo {
+    background-position: -128px -160px;
+}
+
+@media screen and (min-width: 480px) {
+    .logo.logo-yahoo {
+        background-position: -192px -240px;
+    }
+}
+
+.logo.logo-yelp {
+    background-position: -160px -160px;
+}
+
+@media screen and (min-width: 480px) {
+    .logo.logo-yelp {
+        background-position: -240px -240px;
+    }
+}

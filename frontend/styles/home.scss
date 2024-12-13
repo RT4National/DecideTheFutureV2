@@ -1,0 +1,1444 @@
+$bad: #e05730;
+$good: #07bbb0;
+$neutral: #6b5547;
+$title: #2f3a42;
+$light: #FFF;
+$text: #272727;
+
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* end eric meyer's reset */
+.clear:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clear {
+    display: inline-block;
+}
+
+/* hide IE mac \*/
+* html .clear {
+    height: 1%;
+}
+
+.clear {
+    display: block;
+}
+
+/* */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    font-size: 62.5%;
+    height: 100%;
+}
+
+body {
+    background-color: $light;
+    font-size: 1.6rem;
+    font-family: 'Open Sans', 'open-sans', Arial, sans-serif;
+    padding: 0rem 0px 0;
+    position: relative;
+}
+
+@media screen and (min-width: 1280px) {
+    body {
+        background-size: 100% auto;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: $title;
+    font-family: 'Montserrat', 'bebas-neue', Impact, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 1;
+    text-align: center;
+    letter-spacing: 0.08rem;
+    margin: 0 auto 3rem auto;
+    padding: 5rem 10px 0 10px;
+    text-transform: uppercase;
+    max-width: 700px;
+}
+
+@media screen and (max-width: 640px) {
+    h1 {
+        font-size: 25px;
+    }
+}
+
+@media screen and (min-width: 640px) {
+    h1 {
+        font-size: 25px;
+    }
+}
+
+h1 em {
+    display: block;
+}
+
+@media screen and (min-width: 480px) {
+    h1#top {
+        padding-top: 5.5rem;
+    }
+}
+
+@media screen and (min-width: 640px) {
+    h1#top {
+        padding-top: 9.36rem;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    h1#top {
+        font-size: 45px;
+    }
+}
+
+h2 {
+    font-size: 17vw;
+    letter-spacing: 0.16rem;
+    margin-bottom: 25px;
+}
+
+@media screen and (min-width: 480px) {
+    h2 {
+        font-size: 8rem;
+    }
+}
+
+h3 {
+    display: block;
+    font-size: 3.52rem;
+    margin-bottom: 0.8rem;
+}
+
+h3.cta {
+    font-family: 'Open Sans', 'open-sans', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    padding-top: 0rem;
+    max-width: 768px;
+    line-height: 3rem;
+    text-shadow: 0px 0px 10px black;
+    margin: 0 auto 3rem auto;
+}
+
+h3 a {
+    color: $text;
+    font-weight: bold;
+}
+
+dt, dd, p {
+    color: $text;
+    margin: 0 auto 3rem;
+    max-width: 72ch;
+}
+
+dt {
+    font-weight: bold;
+    margin: 0 auto;
+}
+
+p {
+    text-align: center;
+}
+
+p.just {
+  text-align: justify;
+}
+
+p.cta {
+    line-height: 2.32rem;
+    color: #fbf4ff;
+}
+
+dd p {
+    text-align: left;
+}
+
+.hidden {
+    display: none;
+}
+
+.share-icon.twitter {
+    background-position: 0 0;
+    width: 6rem;
+    height: 6rem;
+    background-image: url('/images/share-icons.png');
+    background-repeat: no-repeat;
+    background-size: 120px 60px;
+}
+
+.share-icon.facebook {
+    background-position: -50% 0;
+    width: 6rem;
+    height: 6rem;
+    background-image: url('/images/share-icons.png');
+    background-repeat: no-repeat;
+    background-size: 120px 60px;
+}
+
+.copy h1 {
+    font-size: 22px;
+    margin: 0 auto 3rem;
+    max-width: 66rem;
+    padding: 5rem 0 0;
+}
+
+.copy h1 a:link, .copy h1 a:visited, .copy h1 a:hover, .copy h1 a:active {
+    color: $title;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 480px) {
+    .copy h1 {
+        font-size: 25px;
+    }
+}
+
+@media screen and (min-width: 640px) {
+    .copy h1 {
+        padding: 5rem 3rem 0;
+        font-size: 35px;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .copy h1 {
+        padding: 5rem 6rem 0;
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .copy h1 {
+        padding: 5rem 0 0;
+    }
+}
+
+.copy article {
+    max-height: 60rem;
+    overflow: hidden;
+    position: relative;
+    transition: max-height 400ms;
+}
+
+@media screen and (min-width: 480px) {
+    .copy article {
+        max-height: 28rem;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .copy article {
+        max-height: 32rem;
+    }
+}
+
+.copy article.expanded {
+    max-height: 10000rem;
+    margin-bottom: 1rem;
+}
+
+.copy article.expanded .more {
+    display: none;
+}
+
+.copy article ul.bulleted li {
+    list-style-type: disc;
+    max-width: 52ch;
+    margin: 0px auto 3rem;
+    color: #fbf4ff;
+    text-align: left;
+    line-height: 1.5;
+    font-size: 2.2rem;
+}
+
+.copy a {
+    color: $text;
+}
+
+.copy p {
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+.copy strong {
+    font-weight: bold;
+}
+
+.copy ul li {
+    max-width: 72ch;
+    margin: 0px auto 3rem;
+    color: $text;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.copy h3, .copy h4 {
+    color: $text;
+}
+
+.copy h5 {
+  margin-bottom: 5px
+}
+
+.copy p {
+  span {
+    display: block;
+    line-height: 1.3;
+    margin-bottom: 7px;
+    em {
+      font-style: italic;
+    }
+  }
+}
+
+.copy hr {
+    border-color: transparent;
+    border-bottom: #35353e solid 0.1rem;
+    margin: 0 auto 0rem;
+    width: 30%;
+}
+
+@media screen and (min-width: 480px) {
+    .copy hr {
+        margin-bottom: 1rem;
+    }
+}
+
+.copy hr:first-child {
+    display: none;
+}
+
+.copy .btn {
+    margin-top: 2rem;
+    display: inline-block;
+    padding: 5px;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    background-color: $good;
+    padding: 5px 15px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+@media screen and (min-width: 480px) {
+    .copy .btn {
+        font-size: 2rem;
+    }
+}
+
+.copy .btn:hover {
+    background: #ee3d3d;
+}
+
+.copy blockquote {
+    display: block;
+    margin: 0px auto;
+    width: 100%;
+    max-width: 768px;
+    overflow: auto;
+    background: #444457;
+    padding: 10px;
+    color: #eee;
+    font-family: "Courier New";
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+button.link {
+    background: transparent;
+    border: none;
+    color: #bcc7e4;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+button.link:hover, button.link:active, button.link:focus {
+    color: #fbf4ff;
+}
+
+.inline {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+.inline li {
+    display: inline;
+}
+
+ul.piped li, ol.piped li {
+    margin: 0;
+    padding: 0;
+}
+
+ul.piped li::before, ol.piped li::before {
+    content: '|\00a0';
+    display: inline-block;
+}
+
+ul.piped li:first-child::before, ol.piped li:first-child::before {
+    content: '';
+    display: none;
+}
+
+@keyframes bladeFade {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.spinner {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.spinner .blade {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -4%;
+    height: 8%;
+    width: 100%;
+}
+
+.spinner .blade > div {
+    width: 25%;
+    margin: 0 0 0 auto;
+    height: 100%;
+    background: #f80d1b;
+    border-radius: 1000px;
+    opacity: 1;
+    animation-duration: 2s;
+    animation-name: bladeFade;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.spinner .blade.d02 {
+    transform: rotate(-30deg);
+}
+
+.spinner .blade.d02 > div {
+    animation-delay: -0.16666667s;
+}
+
+.spinner .blade.d03 {
+    transform: rotate(-60deg);
+}
+
+.spinner .blade.d03 > div {
+    animation-delay: -0.33333333s;
+}
+
+.spinner .blade.d04 {
+    transform: rotate(-90deg);
+}
+
+.spinner .blade.d04 > div {
+    animation-delay: -0.5s;
+}
+
+.spinner .blade.d05 {
+    transform: rotate(-120deg);
+}
+
+.spinner .blade.d05 > div {
+    animation-delay: -0.66666667s;
+}
+
+.spinner .blade.d06 {
+    transform: rotate(-150deg);
+}
+
+.spinner .blade.d06 > div {
+    animation-delay: -0.83333333s;
+}
+
+.spinner .blade.d07 {
+    transform: rotate(-180deg);
+}
+
+.spinner .blade.d07 > div {
+    animation-delay: -1s;
+}
+
+.spinner .blade.d08 {
+    transform: rotate(-210deg);
+}
+
+.spinner .blade.d08 > div {
+    animation-delay: -1.16666667s;
+}
+
+.spinner .blade.d09 {
+    transform: rotate(-240deg);
+}
+
+.spinner .blade.d09 > div {
+    animation-delay: -1.33333333s;
+}
+
+.spinner .blade.d10 {
+    transform: rotate(-270deg);
+}
+
+.spinner .blade.d10 > div {
+    animation-delay: -1.5s;
+}
+
+.spinner .blade.d11 {
+    transform: rotate(-300deg);
+}
+
+.spinner .blade.d11 > div {
+    animation-delay: -1.66666667s;
+}
+
+.spinner .blade.d12 {
+    transform: rotate(-330deg);
+}
+
+.spinner .blade.d12 > div {
+    animation-delay: -1.83333333s;
+}
+
+#state_selector select {
+    cursor: pointer;
+    width: 170px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 2rem;
+    color: white;
+    border: 0px none transparent;
+    background: transparent url('/images/images/arrow.png') no-repeat 100% 0px;
+    background-size: auto 100%;
+    text-align: left;
+    -webkit-appearance: none;
+    /* gets rid of default appearance in Webkit browsers*/
+    -moz-appearance: none;
+    /* Get rid of default appearance for older Firefox browsers */
+    -ms-appearance: none;
+    /* get rid of default appearance for IE8, 9 and 10*/
+    appearance: none;
+    position: relative;
+    background-color: #434350;
+}
+
+#state_selector select:hover {
+    background-color: #333340;
+}
+
+#state_selector select option {
+    text-align: left;
+    background: #333340;
+}
+
+#state_selector select::-ms-expand {
+    display: none;
+    /* hide default arrow in IE10 */
+}
+
+#call_congress {
+    display: inline-block;
+    color: $text;
+    opacity: .75;
+    margin-top: 10px;
+    font-size: 1.5rem;
+    text-decoration: none;
+    border-bottom: 1px dotted white;
+}
+
+#call_congress:hover {
+    opacity: 1;
+}
+
+.selectors {
+    color: $text;
+    font-size: 2rem;
+    margin: 10px auto 0px auto;
+}
+
+.selectors .tweet_to {
+    font-weight: bold;
+    margin-right: .5rem;
+    line-height: 40px;
+}
+
+.selectors label {
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: top;
+    padding: 5px 15px 5px 5px;
+    margin: 0rem 0rem 0rem .5rem;
+    height: 40px;
+    line-height: 30px;
+}
+
+.selectors label.sel {
+    background: #636370;
+}
+
+.selectors label:hover {
+    background: #535360;
+}
+
+.selectors label {
+    padding-right: 5px;
+}
+
+.selectors label.sel {
+    background: transparent;
+}
+
+.selectors label.sel:hover {
+    background: #535360;
+}
+
+.selectors label:last-child {
+    display: none;
+}
+
+.selectors label input {
+    display: none;
+}
+
+.selectors label span.just {
+    display: none;
+}
+
+#tweet_text_container {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: 0px auto;
+}
+
+#tweet_text_container textarea {
+    width: 100%;
+    max-width: 500px;
+    height: 112px;
+    font-family: 'Open Sans', 'open-sans', Arial, sans-serif;
+    font-size: 1.5rem;
+    padding: 5px 10px;
+    margin-bottom: 0px;
+    resize: none;
+}
+
+@media screen and (min-width: 640px) {
+    #tweet_text_container textarea {
+        font-size: 2rem;
+    }
+}
+
+#tweet_text_container #remaining {
+    position: absolute;
+    right: 10px;
+    bottom: 7px;
+    font-size: 3rem;
+    color: gray;
+    opacity: .7;
+}
+
+#tweet_text_container #remaining.danger {
+    color: red;
+}
+
+#targets {
+    margin: 2rem auto 2rem auto;
+    max-width: 95%;
+    position: relative;
+    text-align: center;
+    width: 60rem;
+    display: none;
+}
+
+#targets .side0, #targets .side1 {
+    display: inline-block;
+}
+
+#targets .politician {
+    margin: 0 2.5rem 0rem 2.5rem;
+}
+
+@media screen and (min-width: 640px) {
+    #targets {
+        display: block;
+    }
+
+    #targets .side0 {
+        position: absolute;
+        left: -11.5rem;
+    }
+
+    #targets .side1 {
+        position: absolute;
+        right: -11.5rem;
+        margin-left: 372px;
+    }
+
+    #targets .politician {
+        margin: 0;
+    }
+}
+
+p.cta {
+    font-size: 2rem;
+    line-height: 2.8rem;
+    text-shadow: 0 0 0.5rem black;
+}
+
+.disclosure {
+    line-height: 1.2;
+    margin-top: 1.6rem;
+}
+
+.action {
+    max-width: 90%;
+    margin: 5rem auto 1rem auto;
+    text-align: center;
+    width: 60rem;
+}
+
+.action iframe {
+    display: none;
+    margin: 10px auto;
+    width: 260px;
+    height: 50px;
+}
+
+@media screen and (min-width: 800px) {
+    .action iframe {
+        width: 400px;
+        height: 75px;
+    }
+}
+
+.action a.tweet {
+    display: block;
+    margin: 25px auto;
+    background-color: #17A1CE;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Open Sans', 'open-sans', Arial, sans-serif, Helvetica, Verdana, sans-serif;
+    color: $light;
+    width: 250px;
+    height: 50px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    line-height: 50px;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1bbaee+0,17a1ce+100 */
+    background: #1bbaee;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #1bbaee 0%, #17a1ce 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #1bbaee), color-stop(100%, #17a1ce));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #1bbaee 0%, #17a1ce 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #1bbaee 0%, #17a1ce 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #1bbaee 0%, #17a1ce 100%);
+    /* IE10+ */
+    background: linear-gradient(to bottom, #1bbaee 0%, #17a1ce 100%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1bbaee', endColorstr='#17a1ce', GradientType=0);
+    /* IE6-9 */
+}
+
+.action a.tweet img {
+    width: 24px;
+    height: auto;
+    vertical-align: middle;
+    margin: 0px 5px 3px 0px;
+}
+
+@media screen and (min-width: 400px) {
+    .action a.tweet {
+        width: 390px;
+        height: 75px;
+        line-height: 75px;
+        font-size: 23px;
+    }
+
+    .action a.tweet img {
+        width: 38px;
+        height: auto;
+    }
+}
+
+.action a.tweet:hover {
+    background: #17A1CE;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5);
+    text-shadow: 0px;
+}
+
+.action h3 {
+    color: $text;
+    opacity: .8;
+    margin-bottom: 2rem;
+}
+
+.action p {
+    color: $text;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.action p:first-child {
+    /*background: @action-box-backgrounds;*/
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    line-height: 1.43;
+    font-size: 2.1rem;
+    padding: 0 1.44rem 0;
+}
+
+.action.top {
+    margin-top: 2rem;
+}
+
+.action.top p:first-child {
+    background: #444457;
+    padding-top: 1rem;
+}
+
+.action form {
+    background: #444457;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    padding: 1.3rem 1.44rem 1.8rem;
+}
+
+.action .share {
+    margin-top: 2rem;
+}
+
+.action strong {
+    font-weight: bold;
+}
+
+
+.bar rect {
+    shape-rendering: crispEdges;
+}
+
+.bar text {
+    fill: #000;
+}
+
+.axis path, .axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+/*
+* Everything is relative.
+*
+* Including this component. To resize, overwrite the font-size of
+* div.share, button.social somewhere in your code.
+*
+* *****************
+* Don't touch this.
+* *****************
+*/
+div.share, button.social {
+    font-size: 1.4rem;
+}
+
+div.share {
+    border-radius: 7.142857143em;
+    display: inline-block;
+    text-align: center;
+}
+
+@media screen and (min-width: 480px) {
+    div.share {
+        padding: 1rem;
+        background: #16141f;
+    }
+}
+
+button.social {
+    border: 0;
+    border-radius: 7.142857143em;
+    box-sizing: border-box;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Open Sans', 'open-sans', Arial, sans-serif;
+    font-weight: bold;
+    height: 2.142857143em;
+    line-height: 2;
+    margin-left: 0.357142857em;
+    margin-right: 0.357142857em;
+    padding: 0 1em 0 2.857142857em;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+button.social::before {
+    content: '';
+    display: block;
+    left: 1em;
+    position: absolute;
+    top: 0.357142857em;
+}
+
+button.social.twitter {
+    background: #17a1ce;
+}
+
+button.social.twitter::before {
+    background-position: 0 0;
+    width: 1.42857143em;
+    height: 1.42857143em;
+    background-image: url('/images/share-icons.png');
+    background-repeat: no-repeat;
+    background-size: auto 1.42857143em;
+}
+
+button.social.facebook {
+    background: #3b5a95;
+}
+
+@media screen and (min-width: 480px) {
+    button.social.facebook {
+        margin-bottom: 0;
+    }
+}
+
+button.social.facebook::before {
+    background-position: -50% 0;
+    width: 1.42857143em;
+    height: 1.42857143em;
+    background-image: url('/images/share-icons.png');
+    background-repeat: no-repeat;
+    background-size: auto 1.42857143em;
+    background-position: 100% 0;
+}
+
+button.social.donate {
+    padding-left: 1em;
+    background: #e6b520;
+}
+
+
+
+
+.abc {
+    background-image: url('/images/govt-depts.png');
+    background-repeat: no-repeat;
+    background-size: 600px 600px;
+    border: 0;
+    color: transparent;
+    display: block;
+    font: 0/0 a;
+    height: 20rem;
+    text-shadow: none;
+    width: 20rem;
+}
+
+.abc.depttreasury {
+    background-position: 0 0;
+}
+
+.abc.deptodni {
+    background-position: -200px 0;
+}
+
+.abc.deptjustice {
+    background-position: 0 -200px;
+}
+
+.abc.depthomelandsecurity {
+    background-position: -200px -200px;
+}
+
+.abc.deptenergy {
+    background-position: -400px 0;
+}
+
+.abc.deptdefense {
+    background-position: -400px -200px;
+}
+
+.abc.deptcommerce {
+    background-position: 0 -400px;
+}
+
+#latest {
+    border-top: 5px solid #400;
+    background: rgba(64, 0, 0, 0.5);
+    padding: 0px 10px;
+}
+
+#latest img {
+    width: 100px;
+    height: 100px;
+    margin: 15px;
+}
+
+#latest p {
+    line-height: 1.5;
+    font-size: 2.2rem;
+    color: white;
+}
+
+#latest p.wide {
+    max-width: 100%;
+}
+
+#companies {
+    background: white;
+    margin-bottom: 0px;
+    padding-bottom: 5rem;
+    text-align: center;
+}
+
+#companies h1 {
+    color: #333;
+}
+
+#companies img {
+    width: auto;
+    height: auto;
+    max-height: 100px;
+    max-width: 250px;
+    vertical-align: middle;
+    margin: 10px 5px;
+}
+
+#companies p {
+    max-width: 90%;
+    color: #666;
+}
+
+
+
+
+#techNote a:link, #techNote a:visited {
+    color: #060607;
+    text-decoration: none;
+}
+
+#techNote a:hover, #techNote a:active, #techNote a:focus {
+    text-decoration: underline;
+}
+
+.politicians {
+    margin-top: 2.4rem;
+}
+
+@media screen and (min-width: 640px) {
+    .politicians {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+    }
+}
+
+
+
+.sort {
+    color: rgba(251, 244, 255, 0.7);
+    font-size: 2.08rem;
+    margin: 0 10px;
+}
+
+.sort.sel {
+    color: #fbf4ff;
+    font-weight: bold;
+}
+
+.scoring {
+    background-repeat: no-repeat;
+    background-size: 254px 127px;
+    border: 0;
+    color: transparent;
+    font: 0/0 a;
+    text-shadow: none;
+}
+
+@media screen and (-webkit-max-device-pixel-ratio: 1.49), (max-resolution: 143.9dpi), (max-resolution: 1.5dppx) {
+    .scoring {
+        background-image: url('/images/scoring.png');
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.49dppx) {
+    .scoring {
+        background-image: url('/images/scoring@2x.png');
+    }
+}
+
+
+
+.action_bar {
+    bottom: 0;
+    left: 0;
+    padding: 0.3rem 0.1rem 0.4rem 0.1rem;
+    position: fixed;
+    width: 100%;
+    border-top: 0.1rem solid #51486f;
+    background: #242031;
+    z-index: 9001;
+    font-weight: 600;
+    text-align: center;
+}
+
+@media screen and (min-width: 1120px) {
+    .action_bar {
+        text-align: right;
+        padding: 10px 10px 12px 10px;
+    }
+}
+
+.action_bar span {
+    display: none;
+}
+
+@media screen and (min-width: 480px) {
+    .action_bar span {
+        display: inline;
+    }
+}
+
+.action_bar a {
+    padding-left: 15px;
+    text-align: center;
+}
+
+.action_bar .call {
+    display: none;
+}
+
+.action_bar .call a {
+    color: white;
+}
+
+@media screen and (min-width: 1120px) {
+    .action_bar .call {
+        display: block;
+        font-size: 27px;
+        color: $text;
+        position: absolute;
+        left: 30px;
+        top: 11px;
+        font-weight: 300;
+    }
+
+    .action_bar .call strong {
+        font-weight: bold;
+        color: white;
+    }
+}
+
+.action_bar .donate {
+    display: none;
+    margin-top: 0;
+    margin: 0 5px 0px 15px;
+    border: 0;
+    padding: 0 15px 0 15px;
+    height: 30px;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 27px;
+    width: 120px;
+    color: #fbf4ff;
+    font-family: 'Open Sans', 'open-sans', Arial, sans-serif;
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 25px;
+    background: #5f5f84;
+    /* Old browsers */
+}
+
+@media screen and (min-width: 480px) {
+    .action_bar .donate {
+        display: inline-block;
+    }
+}
+
+.action_bar button.social {
+    margin-top: 2px;
+}
+
+nav {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    background-color: $title;
+    border-bottom: 0.1rem solid #51486f;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    padding: .5rem 0 .8rem 0;
+    z-index: 9001;
+}
+
+nav a {
+    color: rgba(251, 244, 255, 0.9);
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+@media screen and (min-width: 480px) {
+    nav a {
+        font-size: 1.8rem;
+    }
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li:before {
+    content: '\00a0\2022\00a0\00a0';
+    color: #fbf4ff;
+    font-size: 1.5rem;
+}
+
+nav ul li:first-child:before {
+    content: '';
+}
+
+body .sp_fb_small, body .sp_tw_small {
+    display: inline-block;
+    height: 30px;
+    vertical-align: bottom;
+    margin: 0px 5px;
+}
+
+body .sp_fb_small a, body .sp_tw_small a {
+    border: 0;
+    border-radius: 7.142857143em;
+    box-sizing: border-box;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Open Sans', 'open-sans', Arial, sans-serif;
+    font-weight: bold;
+    height: 30px;
+    width: 120px;
+    line-height: 2;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+body .sp_fb_small a::before, body .sp_tw_small a::before {
+    position: absolute;
+    display: block;
+    left: 45px;
+    top: 0px;
+    height: 30px;
+    line-height: 30px;
+}
+
+@media screen and (max-width: 480px) {
+    div.share .sp_fb_small, div.share .sp_tw_small {
+        margin: 0px;
+    }
+}
+
+body .sp_fb_small a {
+    background-color: #3b5a95;
+    left: 1rem;
+    position: relative;
+}
+
+body .sp_fb_small a::before {
+    background-position: -50% 0;
+    width: 1.8rem;
+    height: 1.8rem;
+    background-image: url('/images/share-icons.png');
+    background-repeat: no-repeat;
+    background-size: auto 1.8rem;
+}
+
+body .sp_fb_small a::after {
+    content: 'SHARE';
+}
+
+body .sp_tw_small a {
+    background-color: #17a1ce;
+    left: 1rem;
+    position: relative;
+}
+
+body .sp_tw_small a::before {
+    background-position: 0 0;
+    width: 1.8rem;
+    height: 1.8rem;
+    background-image: url('/images/share-icons.png');
+    background-repeat: no-repeat;
+    background-size: auto 1.8rem;
+}
+
+body .sp_tw_small a::after {
+    content: 'TWEET';
+}
+
+.video-wrapper {
+    width: 60rem;
+    margin: 0 auto;
+    max-width: 100%;
+    border: 4px solid #353535;
+}
+
+.video-container {
+    height: 0;
+    margin: 0 auto;
+    max-width: 66rem;
+    padding-bottom: 56.25%;
+    padding-top: 3rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.video-container iframe, .video-container object, .video-container embed {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+iframe.map {
+    display: block;
+    height: 400px;
+    margin: 0 auto;
+    max-width: 90%;
+    width: 768px;
+}
+
+.departments {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.more {
+    bottom: 0;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), $light 75%);
+    color: $text;
+    font-family: 'Open Sans', 'open-sans', Arial, sans-serif;
+    font-size: 2.2rem;
+    height: 12.7rem;
+    left: 0;
+    padding: 7rem 0 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    text-transform: uppercase;
+    transition: background-image 300ms;
+}
+
+.more:link, .more:visited {
+    text-decoration: none;
+}
+
+.more:hover, .more:active {
+    color: $text;
+    text-decoration: underline;
+}
+
+.more:hover::before, .more:active::before {
+    color: $text;
+    text-decoration: none;
+}
+
+.more::before {
+    display: inline-block;
+    color: $text 50%;
+    content: '▼';
+    margin-right: 1rem;
+}
+
+.candidates {
+    padding: 1%;
+}
+
+.candidates .candidates_table {
+    border-radius: 5px;
+    max-width: 768px;
+    margin: 60px auto 0 auto;
+    color: #fbf4ff;
+    padding: 1rem 0 0;
+    text-align: center;
+    background: #232330;
+}
+
+.clickable {
+    text-decoration: none;
+}
+
+.candidate_shot:hover {
+    background: #212140;
+    border-radius: 30px;
+}

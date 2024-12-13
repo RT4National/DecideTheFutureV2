@@ -1,0 +1,79 @@
+@use "home";
+
+#fftf-footer {
+    background-color: home.$title;
+    color: #fbf4ff;
+    font-size: 1.4rem;
+    left: 0;
+    line-height: 1.5;
+    padding: 2rem 1rem 5rem 1rem;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    margin-top: 5rem;
+    border-top: 3px solid home.$good;
+}
+
+#fftf-footer hr {
+    display: block;
+    margin: 1rem auto 3rem auto;
+    border-width: 0;
+    width: 40%;
+    border-top: 1px solid #2f4557;
+}
+
+#fftf-footer .share {
+    margin-bottom: 3rem;
+}
+
+#fftf-footer img {
+    margin-top: 1rem;
+}
+
+@media screen and (min-width: 480px) {
+    #fftf-footer {
+        padding: 2rem 1rem 5rem 1rem;
+    }
+}
+
+@media screen and (min-width: 960px) {
+    #fftf-footer {
+        padding: 2rem 1rem 7rem 1rem;
+    }
+}
+
+#fftf-footer a.text:link, #fftf-footer a.text:visited, #fftf-footer a.text:hover, #fftf-footer a.text:active, #fftf-footer a.text:focus {
+    color: #fbf4ff;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+#fftf-footer a.text:hover, #fftf-footer a.text:active, #fftf-footer a.text:focus {
+    border-bottom: 0.1rem dotted lightgray;
+    color: rgba(251, 244, 255, 0.5);
+}
+
+#fftf-footer p {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: home.$light;
+}
+
+#fftf-footer p em {
+    font-style: italic;
+}
+
+#fftf-footer p small {
+    font-size: 1.4rem;
+    opacity: .75;
+}
+
+.footer-logo {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    vertical-align: middle;
+    max-height: 11rem;
+    max-width: 300px;
+    margin: 0 auto;
+}

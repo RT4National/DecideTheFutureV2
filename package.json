@@ -2,6 +2,7 @@
     "scripts": {
         "build": "npm run build:frontend && npm run copy:frontend && npm run build:backend",
         "build:frontend": "cd frontend && npm install && npm run build",
+        "copy:frontend": "copyfiles -u 2 \"frontend/out/**/*\" backend/public",
         "build:backend": "cd backend && npm install && npm run build"
     },
     "dependencies": {
