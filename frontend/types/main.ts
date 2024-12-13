@@ -23,9 +23,9 @@ export interface PoliticianData {
     fourthamendment: string;
     phone: string;
     email: string;
-    score_criteria: ScoreCriteria[];
+    score_criteria?: ScoreCriteria[];
     score?: number;
-    [key: string]: any;
+    [key: string]: IgnoredAny;
 }
 
 export interface ScoreCriteria {

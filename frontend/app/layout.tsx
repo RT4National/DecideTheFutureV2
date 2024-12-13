@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/google-font-display */
+/* eslint-disable @next/next/no-page-custom-font */
 import { Metadata, Viewport } from "next";
 
 export const viewport: Viewport = {
