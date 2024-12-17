@@ -1,8 +1,9 @@
-import { PoliticianData, Scoring } from "@/types";
+import { PoliticianData, ScoreCriteria, Scoring } from "@/types";
+import { getScoreGrade } from "./get-grade";
 
 export const doScore = (politician: PoliticianData): Scoring => {
     let score = 0;
-    const score_criteria = [];
+    const score_criteria: ScoreCriteria[] = [];
 
     if (politician['fisa_courts_reform_act'] == 'X') {
         const inc = 3;
@@ -1270,56 +1271,10 @@ export const doScore = (politician: PoliticianData): Scoring => {
         });
         score += inc;
     }
-    let grade = "F";
-
-    if (score_criteria.length == 0) {
-        grade = '?';
-    } else if (score > 30) {
-        grade = "A+";
-    }
-    else if (score > 24) {
-        grade = "A";
-    }
-    else if (score > 18) {
-        grade = "A-";
-    }
-    else if (score > 13) {
-        grade = "B+";
-    }
-    else if (score > 9) {
-        grade = "B";
-    }
-    else if (score > 5) {
-        grade = "B-";
-    }
-    else if (score > 2) {
-        grade = "C+";
-    }
-    else if (score > -1) {
-        grade = "C";
-    }
-    else if (score > -3) {
-        grade = "C-";
-    }
-    else if (score > -6) {
-        grade = "D+";
-    }
-    else if (score > -7) {
-        grade = "D";
-    }
-    else if (score > -16) {
-        grade = "D-";
-    }
-    else if (politician['last_name'] == 'McConnell') {
-        grade = "F-";
-    }
-    else {
-        grade = "F";
-    }
 
     return {
         score: score,
-        grade: grade,
+        grade: getScoreGrade(score, politician, score_criteria),
         score_criteria: score_criteria
     }
 }
