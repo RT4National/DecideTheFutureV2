@@ -1,2 +1,2 @@
-export * from "./do-score";
+export * from "./score";
 export * from "./process-politican";

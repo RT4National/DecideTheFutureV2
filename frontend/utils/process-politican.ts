@@ -1,6 +1,6 @@
 import { STATES } from "@/constants";
 import { PoliticianData } from "@/types";
-import { doScore } from "./do-score";
+import { doScore } from "./score";
 
 export const processPolitician = (entry: never) => {
     const politician: PoliticianData = {
