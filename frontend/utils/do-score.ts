@@ -554,15 +554,6 @@ export const doScore = (politician: PoliticianData): Scoring => {
         });
         score += inc;
     }
-    // if (politician['facial'] == 'Yes') {
-    //   const inc = 3;
-    //   score_criteria.push({
-    //     score:  inc,
-    //     info:   'Sponsored bill to prohibit use of facial recognition technology to identify or track an end user without consent',
-    //     url: 'https://www.govtrack.us/congress/bills/116/s847'
-    //   });
-    //   score += inc;
-    // }
     if (politician['biometric'] == 'Yes') {
         const inc = 4;
         score_criteria.push({
