@@ -231,15 +231,6 @@ export const doScore = (politician: PoliticianData): Scoring => {
         });
         score += inc;
     }
-    // if (politician['s_702_reforms'] == 'X') {
-    //     const inc = 4;
-    //     score_criteria.push({
-    //         score:  inc,
-    //         info:   'Supported bills reforming Section 702 of FISA',
-    //         url:undefined
-    //     });
-    //     score += inc;
-    // }
     if (politician['massie_lofgren_amendment_to_hr2685_defund_702'] == 'GOOD') {
         const inc = 3;
         score_criteria.push({
