@@ -934,7 +934,7 @@ export const doScore = (politician: PoliticianData): Scoring => {
         score += inc;
     }
     if (politician['s1409'] == 'Yes') {
-        const inc = -2;
+        const inc = -3;
         score_criteria.push({
             score: inc,
             info: "Cosponsored bill that would remove liability shield for tech companies that host content any state attorney-general disapproves of.",
