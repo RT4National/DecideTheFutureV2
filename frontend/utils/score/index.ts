@@ -12,7 +12,7 @@ export const doScore = (politician: PoliticianData): Scoring => {
             const key: string = data.key;
             let score:number, info: string, url: string;
             data.scoring.forEach(current => {
-                if (politician[key] === current.value) {
+                if (politician[key] === current.value && (!current.hasOwnProperty('organization') || current.organization === politician['organization'])) {
                     score = current.score;
                     if (data.url === 'X') url = current.url;
                     else url = data.url;

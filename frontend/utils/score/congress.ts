@@ -1,6 +1,7 @@
 type Scoring = {
     value: string;
     score: number;
+    organization?: string;
     addText?: string;
     info?: string;
     url?: string;
@@ -27,7 +28,8 @@ export const Congress: { [key: string]: CongressData} = {
             {
                 key: "s_1551_iosra",
                 googleSheetIndex: 26,
-                info: "Supported the Intelligence Oversight and Surveillance Reform Act",
+                display: "Sponsored or cosponsored S. 1551, IOSRA (Yes=+4)", // 'display string' is displayed in Scoring System. It is for special case when 'info string' is different with 'displayed string'.
+                info: "Supported the Intelligence Oversight and Surveillance Reform Act", // if 'display string' doesn't exist, 'info string' is displayed in Scoring System
                 url: "https://cdt.org/blog/bills-offer-clear-choice-end-bulk-collection-of-americans%E2%80%99-data-or-endorse-it/",
                 scoring: [
                     {
@@ -39,6 +41,7 @@ export const Congress: { [key: string]: CongressData} = {
             {
                 key: "fisa_improvements_act",
                 googleSheetIndex: 27,
+                display: "Sponsored or cosponsored FISA Improvements Act (Yes=-4)",
                 info: "Supported the FISA Improvements Act",
                 url: "http://www.theguardian.com/world/2013/nov/15/feinstein-bill-nsa-warrantless-searches-surveillance",
                 scoring: [
@@ -51,6 +54,7 @@ export const Congress: { [key: string]: CongressData} = {
             {
                 key: "fisa_transparency_and_modernization_act",
                 googleSheetIndex: 28,
+                display: "Sponsored or cosponsored FISA Transparency & Modernization Act (Yes=-4)",
                 info: "Supported the FISA Transparency and Modernization Act",
                 url: "https://www.eff.org/deeplinks/2014/04/nsa-reform-bill-intelligence-community-written-intelligence-community-and",
                 scoring: [
@@ -63,6 +67,7 @@ export const Congress: { [key: string]: CongressData} = {
             {
                 key: "surveillance_state_repeal_act",
                 googleSheetIndex: 29,
+                display: "Sponsored or cosponsored Surveillance State Repeal Act (2014 or 2015) (Yes=+4)",
                 info: "Supported the Surveillance State Repeal Act",
                 url: "http://www.restorethe4th.com/blog/go-big-or-go-home-pass-the-new-surveillance-state-repeal-act/",
                 scoring: [
@@ -72,16 +77,22 @@ export const Congress: { [key: string]: CongressData} = {
                     }
                 ]
             },
-            // this should be considered separately
             {
-                key: "usa_freedom_prior_to_20140518",
+                key: "usa_freedom_prior_to_20140518", // need to compare organization
                 googleSheetIndex: 30,
+                display: "Sponsored or cosponsored USA FREEDOM 2014 prior to 2014-05-18 (Yes=+3)*Before this date, USA FREEDOM was a substantially stronger piece of legislation, meriting +2 rather than +1.",
                 info: "Supported the original USA Freedom Act (prior to May 18th, 2014)",
                 url: "https://www.eff.org/deeplinks/2014/07/new-senate-usa-freedom-act-first-step-towards-reforming-mass-surveillance",
                 scoring: [
+                    {   
+                        value: "X",
+                        organization: "Senate",
+                        score: 3
+                    },
                     {
                         value: "X",
-                        score: 3
+                        organization: "House",
+                        score: 1
                     }
                 ]
             },
@@ -143,8 +154,8 @@ export const Congress: { [key: string]: CongressData} = {
                 key: "first_usaf_cloture_vote",
                 googleSheetIndex: 35,
                 display: '1st USA FREEDOM 2015 cloture vote (Yes=+1, No=+4 or =-4= conditional on "straight reauth" vote)',
-                info: "X",
-                url: "X",
+                info: "X", // if every score has different 'info string', parent 'info string' is 'X' 
+                url: "X", // if every score has different 'url string', parent 'url string' is 'X' 
                 scoring: [
                     {
                         value: "GOOD",
@@ -523,19 +534,48 @@ export const Congress: { [key: string]: CongressData} = {
                     }
                 ]
             },
-            // this should be considered separately
-            // {
-            //     key: "s_139",
-            //     googleSheetIndex: ,
-            //     info: "",
-            //     url: "",
-            //     scoring: [
-            //         {
-            //             value: "",
-            //             score: 
-            //         }
-            //     ]
-            // },
+            {
+                key: "s_139",            // needs to compare organization. for Senate
+                googleSheetIndex: 59,
+                display: "Senate vote for/against cloture on bill extending Section 702 mass surveillance powers (Yes=+4/No=-4)",
+                info: "cloture on bill extending Section 702 mass surveillance powers",
+                url: "https://www.senate.gov/legislative/LIS/roll_call_lists/roll_call_vote_cfm.cfm?congress=115&session=2&vote=00012",
+                scoring: [
+                    {
+                        value: "YES",
+                        score: -4,
+                        organization: "Senate",
+                        addText: "Voted for ",
+                    },
+                    {
+                        value: "NO",
+                        score: 4,
+                        organization: "Senate",
+                        addText: "Voted against"
+                    }                    
+                ]
+            },
+            {
+                key: "s_139",            // for House
+                googleSheetIndex: 59,
+                display: "House vote for/against the USA RIGHTS Act to rein in mass surveillance under Section 702 of the FISA Amendments Act (Yes=+4/No=-4)",
+                info: "the USA RIGHTS Act to rein in mass surveillance under Section 702 of the FISA Amendments Act",
+                url: "http://clerk.house.gov/evs/2018/roll014.xml",
+                scoring: [
+                    {
+                        value: "YES",
+                        score: 4,
+                        organization: "House",
+                        addText: "Voted for ",
+                    },
+                    {
+                        value: "NO",
+                        score: -4,
+                        organization: "House",
+                        addText: "Voted against"
+                    }                    
+                ]
+            },
             {
                 key: "fara",
                 googleSheetIndex: 62,
@@ -555,18 +595,6 @@ export const Congress: { [key: string]: CongressData} = {
                     }
                 ]
             },
-            // {
-            //     key: "",
-            //     googleSheetIndex: ,
-            //     info: "",
-            //     url: "",
-            //     scoring: [
-            //         {
-            //             value: "",
-            //             score: 
-            //         }
-            //     ]
-            // },
         ]
     },
 
@@ -651,19 +679,43 @@ export const Congress: { [key: string]: CongressData} = {
                     }
                 ]
             },
-            // this should be considered separately
-            // {
-            //     key: "h_r_6172",
-            //     googleSheetIndex: ,
-            //     info: "",
-            //     url: "",
-            //     scoring: [
-            //         {
-            //             value: "",
-            //             score: 
-            //         }
-            //     ]
-            // },
+            {
+                key: "h_r_6172",            // needs to compare organization
+                googleSheetIndex: 70,
+                display: "Supported/opposed renewal of PATRIOT Act surveillance powers with cosmetic reforms (Yes=-2/No=+2)",
+                info: "renewal of PATRIOT Act surveillance powers with cosmetic reforms",
+                url: "X",
+                scoring: [
+                    {
+                        value: "YES",
+                        score: -2,
+                        organization: "Senate",
+                        url: "https://www.senate.gov/legislative/LIS/roll_call_lists/roll_call_vote_cfm.cfm?congress=116&session=2&vote=00092",
+                        addText: "Supported ",
+                    },
+                    {
+                        value: "YES",
+                        score: -2,
+                        organization: "House",
+                        url: "http://clerk.house.gov/evs/2020/roll098.xml",
+                        addText: "Supported ",
+                    },                    
+                    {
+                        value: "NO",
+                        score: 2,
+                        organization: "Senate",
+                        url: "https://www.senate.gov/legislative/LIS/roll_call_lists/roll_call_vote_cfm.cfm?congress=116&session=2&vote=00092",
+                        addText: "Opposed ",
+                    },
+                    {
+                        value: "NO",
+                        score: 2,
+                        organization: "House",
+                        url: "http://clerk.house.gov/evs/2020/roll098.xml",
+                        addText: "Opposed ",
+                    },                   
+                ]
+            },
             {
                 key: "earn",
                 googleSheetIndex: 71,
@@ -1141,6 +1193,7 @@ export const Congress: { [key: string]: CongressData} = {
             {
                 key: "s3234",
                 googleSheetIndex: 135,
+                display: "X",
                 info: "Cosponsored the Government Surveillance Reform Act, which would prohibit warrantless queries of U. S. persons, and incorporate every major surveillance reform proposed from 2013-2023",
                 url: "https://www.congress.gov/bill/118th-congress/senate-bill/3234/cosponsors",
                 scoring: [

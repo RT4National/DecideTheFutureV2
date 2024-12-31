@@ -60,23 +60,29 @@ export const ScoringSystem: React.FC = () => {
                <div key={session}>
                     <h5>{session} Congress ({details.date})</h5>
                     <p className='just'>
-                        {details.rules.map((data) => 
+                        {details.rules.map((data, index) => 
                             data.display ? (
-                                <span key={data.key}>{data.display}</span>
+                                data.display !== "X" && <span key={`${data.key}-${index}`}>{data.display}</span>
                             ) : (
                                 data.scoring.length > 1 ? (
-                                    (data.scoring[0].addText === "Voted NO " || data.scoring[0].addText === "Voted YES ") ? (
-                                        <span key={data.key}>
-                                            Voted {data.info}(YES={data.scoring[0].score > 0 ? +data.scoring[0].score : data.scoring[0].score}/NO={data.scoring[1].score > 0 ? +data.scoring[1].score : data.scoring[1].score})
+                                    (data.scoring[0].addText === "Voted YES ") ? (
+                                        <span key={`${data.key}-${index}`}>
+                                            Voted {data.info}(YES={data.scoring[0].score > 0 ? `${+data.scoring[0].score}` : data.scoring[0].score}/NO={data.scoring[1].score > 0 ? +data.scoring[1].score : data.scoring[1].score})
                                         </span>
                                     ) : (
-                                        <span key={data.key}>Voted for/against {data.info}(YES={data.scoring[0].score > 0 ? +data.scoring[0].score : data.scoring[0].score}/NO={data.scoring[1].score > 0 ? +data.scoring[1].score : data.scoring[1].score})</span>
+                                        <span key={`${data.key}-${index}`}>
+                                            Voted for/against {data.info}(YES={data.scoring[0].score > 0 ? `+${data.scoring[0].score}` : data.scoring[0].score}/NO={data.scoring[1].score > 0 ? +data.scoring[1].score : data.scoring[1].score})
+                                        </span>
                                     )
                                 ) : (
                                     data.scoring[0].score > 0 ? (
-                                        <span key={data.key}>{data.info} (YES=+{data.scoring[0].score})</span>
+                                        <span key={`${data.key}-${index}`}>
+                                            {data.info} (YES=+{data.scoring[0].score})
+                                        </span>
                                     ):(
-                                        <span key={data.key}>{data.info} (YES={data.scoring[0].score})</span>
+                                        <span key={`${data.key}-${index}`}>
+                                            {data.info} (YES={data.scoring[0].score})
+                                        </span>
                                     )
                                 )
                             )
