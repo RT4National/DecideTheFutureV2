@@ -129,13 +129,13 @@ export default function Home() {
                         height={38.6}
                     />
                 </a>
-                <a href="http://www.restorethe4th.com/" target="_blank" rel="noopener noreferrer">
+                <a href="http://www.restorethe4th.com/" target="_blank" rel="noopener noreferrer">                    
                     <Image
                         src="/images/restore4th-logo.png"
                         alt="Restore the Fourth"
                         className="footer-logo"
                         width={176}
-                        height={110}
+                        height={100}
                     />
                 </a>
                 <hr />

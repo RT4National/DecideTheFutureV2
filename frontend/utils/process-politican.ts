@@ -1,6 +1,6 @@
 import { STATES } from "@/constants";
 import { PoliticianData } from "@/types";
-import { doScore } from "./do-score";
+import { doScore } from "./score";
 
 export const processPolitician = (entry: never) => {
     const politician: PoliticianData = {
@@ -160,7 +160,10 @@ export const processPolitician = (entry: never) => {
         sa1841: entry[147],
         sa1840: entry[148],
         hr7888_s: entry[149],
-        hr4639: entry[150]
+        hr4639: entry[150],
+        hr6408: entry[151],
+        hr9495_458: entry[152],
+        hr9495_477: entry[153]
     };
 
     const scoring = doScore(politician);

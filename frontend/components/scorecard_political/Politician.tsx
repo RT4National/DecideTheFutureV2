@@ -41,7 +41,7 @@ export const Politician: React.FC<PoliticianProps> = ({ politician, team }) => {
                         <div className="rollover">
                             {politician.twitter && (
                                 <a
-                                    href={`https://twitter.com/intent/tweet?text=%40${politician.twitter} @Restore_The4th Congress is considering this year whether to reauthorize Section 702 of %23FISA. Please cosponsor the Government Surveillance Reform Act, S. 3234 / H. R. 6262, to restore our privacy rights %23FISAReformNow`}
+                                    href={`https://twitter.com/intent/tweet?text=%40${politician.twitter} @Restore_The4th Congress must decide by April '26 whether to reauthorize Section 702 of #FISA. Please cosponsor the Government Surveillance Reform Act to restore our privacy rights #FISAReformNow`}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >

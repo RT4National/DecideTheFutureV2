@@ -6,11 +6,13 @@ import { CAUCUSES, COMMITTEES, STATES } from '@/constants';
 import { processPolitician } from '@/utils';
 import { PoliticianData } from '@/types';
 
+type MemberShipValue = keyof PoliticianData | "All";
+
 interface Props {
     google_sheets_api_key: string;
     filtered?: string;
     name?: string;
-    membership?: string;
+    membership?: MemberShipValue;
     party?: string;
     candidacy?: string;
 }
@@ -20,7 +22,6 @@ interface PoliticiansByCategory {
     neutral: PoliticianData[];
     bad: PoliticianData[];
 }
-
 export const ScorecardPolitical: FC<Props> = ({
     google_sheets_api_key,
     filtered: initialFiltered = 'All',
@@ -43,7 +44,7 @@ export const ScorecardPolitical: FC<Props> = ({
 
     const [filtered, setFiltered] = useState<string>(initialFiltered);
     const [name, setName] = useState<string>(initialName);
-    const [membership, setMembership] = useState<string>(initialMembership);
+    const [membership, setMembership] = useState<MemberShipValue>(initialMembership);
     const [party, setParty] = useState<string>(initialParty);
     const [candidacy, setCandidacy] = useState<string>(initialCandidacy);
     const matchPolitician = useCallback((politician: PoliticianData) => {
@@ -190,7 +191,7 @@ export const ScorecardPolitical: FC<Props> = ({
         if (field === 'view') {
             setFiltered(value);
         } else if (field === 'membership') {
-            setMembership(value);
+            setMembership(value as MemberShipValue);
         } else if (field === 'name') {
             setName(value);
         } else if (field === 'party') {
