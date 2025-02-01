@@ -67,11 +67,11 @@ export const ScoringSystem: React.FC = () => {
                                 data.scoring.length > 1 ? (
                                     (data.scoring[0].addText === "Voted YES ") ? (
                                         <span key={`${data.key}-${index}`}>
-                                            Voted {data.info}(YES={data.scoring[0].score > 0 ? `${+data.scoring[0].score}` : data.scoring[0].score}/NO={data.scoring[1].score > 0 ? +data.scoring[1].score : data.scoring[1].score})
+                                            Voted {data.info}(YES={data.scoring[0].score > 0 ? `${+data.scoring[0].score}` : data.scoring[0].score}/NO={data.scoring[1].score > 0 ? `+${data.scoring[1].score}` : data.scoring[1].score})
                                         </span>
                                     ) : (
                                         <span key={`${data.key}-${index}`}>
-                                            Voted for/against {data.info}(YES={data.scoring[0].score > 0 ? `+${data.scoring[0].score}` : data.scoring[0].score}/NO={data.scoring[1].score > 0 ? +data.scoring[1].score : data.scoring[1].score})
+                                            Voted for/against {data.info}(YES={data.scoring[0].score > 0 ? `+${data.scoring[0].score}` : data.scoring[0].score}/NO={data.scoring[1].score > 0 ? `+${data.scoring[1].score}` : data.scoring[1].score})
                                         </span>
                                     )
                                 ) : (

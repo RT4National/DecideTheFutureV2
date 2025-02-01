@@ -28,9 +28,9 @@ export const Congress: { [key: string]: CongressData} = {
             {
                 key: "s_1551_iosra",
                 googleSheetIndex: 26,
-                display: "Sponsored or cosponsored S. 1551, IOSRA (Yes=+4)", // 'display string' is displayed in Scoring System. It is for special case when 'info string' is different with 'displayed string'.
-                info: "Supported the Intelligence Oversight and Surveillance Reform Act", // if 'display string' doesn't exist, 'info string' is displayed in Scoring System
-                url: "https://cdt.org/blog/bills-offer-clear-choice-end-bulk-collection-of-americans%E2%80%99-data-or-endorse-it/",
+                display: "Sponsored or cosponsored S. 1551, IOSRA (Yes=+4)", // 'display' is displayed in Scoring System. It is for special case when 'info' is different with 'display'.
+                info: "Supported the Intelligence Oversight and Surveillance Reform Act", // if 'display' doesn't exist, 'info' is displayed in Scoring System
+                url: "https://cdt.org/blog/bills-offer-clear-choice-end-bulk-collection-of-americans%E2%80%99-data-or-endorse-it/", // 'url' is displayed in personal modal.
                 scoring: [
                     {
                         value: "X",
@@ -154,13 +154,13 @@ export const Congress: { [key: string]: CongressData} = {
                 key: "first_usaf_cloture_vote",
                 googleSheetIndex: 35,
                 display: '1st USA FREEDOM 2015 cloture vote (Yes=+1, No=+4 or =-4= conditional on "straight reauth" vote)',
-                info: "X", // if every score has different 'info string', parent 'info string' is 'X' 
-                url: "X", // if every score has different 'url string', parent 'url string' is 'X' 
+                info: "X", // if every child score has different 'info', parent 'info' should be 'X'. child 'info' is displayed in personal modal.
+                url: "X", // if every child score has different 'url', parent 'url' should be 'X'. child 'url' is displayed in personal modal. 
                 scoring: [
                     {
                         value: "GOOD",
                         score: 4,
-                        info: "Voted NO on reauthorizing the PATRIOT Act *and* NO on cloture for the first Senate USA Freedom Act",
+                        info: "Voted NO on reauthorizing the PATRIOT Act *and* NO on cloture for the first Senate USA Freedom Act", // 
                         url: 'http://www.thewhir.com/web-hosting-news/senate-votes-to-invoke-cloture-on-usa-freedom-act-advancing-it-to-an-amendment-process'
                     },
                     {
@@ -180,13 +180,13 @@ export const Congress: { [key: string]: CongressData} = {
             {
                 key: "straight_reauth",
                 googleSheetIndex: 36,
-                info: "on reauthorizing the PATRIOT Act",
+                info: "on reauthorizing the PATRIOT Act", // Voted + 'info string' is displayed in Scoring System.
                 url: "X",
                 scoring: [
                     {
                         value: "BAD",
                         score: -3,
-                        addText: "Voted YES ",
+                        addText: "Voted YES ", // 'addText' + 'info' is displayed in personal modal.
                         url: 'https://cdt.org/insight/oppose-senator-feinsteins-fisa-reform-act-of-2015/'
                     },                              
                     {
@@ -200,6 +200,7 @@ export const Congress: { [key: string]: CongressData} = {
             {
                 key: "fisa_reform_act",
                 googleSheetIndex: 37,
+                display: "Sponsored or cosponsored FISA Reform Act (Yes=-3)",
                 info: "Supported the FISA Reform Act",
                 url: "https://www.eff.org/deeplinks/2015/06/eff-opposes-amendments-weakening-usa-freedom-act",
                 scoring: [
@@ -594,7 +595,7 @@ export const Congress: { [key: string]: CongressData} = {
                         info: 'Voted in Intelligence Committee to not report FARA to floor'
                     }
                 ]
-            },
+            }
         ]
     },
 
@@ -1063,7 +1064,13 @@ export const Congress: { [key: string]: CongressData} = {
                         score: 4
                     }
                 ]
-            },
+            }
+        ]
+    },
+
+    "118th": {
+        date: "2023-24",
+        rules: [
             {
                 key: "s686",
                 googleSheetIndex: 125,
@@ -1112,12 +1119,6 @@ export const Congress: { [key: string]: CongressData} = {
                     }
                 ]
             },
-        ]
-    },
-
-    "118th": {
-        date: "2023-24",
-        rules: [
             {
                 key: "hr5309",
                 googleSheetIndex: 129,
@@ -1339,7 +1340,7 @@ export const Congress: { [key: string]: CongressData} = {
                 key: "hr7888_119",
                 googleSheetIndex: 144,
                 info: "final passage of the Reforming Intelligence and Securing America Act",
-                url: "",
+                url: "https://clerk.house.gov/Votes/2024119",
                 scoring: [
                     {
                         value: "Yes",
@@ -1460,7 +1461,62 @@ export const Congress: { [key: string]: CongressData} = {
                         addText: "Voted against "
                     }
                 ]
-            }
+            },
+            // new data
+            {
+                key: "hr6408",
+                googleSheetIndex: 151,
+                info: "on 'IRS Weaponization Act' (HR. 6408/9495, which would give Treasury Sec. power to revoke status of nonprofits on mere assertion of involvement with terrorism) in April.",
+                url: "",
+                scoring: [
+                    {
+                        value: "Yes",
+                        score: -3,
+                        addText: "Voted YES "
+                    },
+                    {
+                        value: "No",
+                        score: 3,
+                        addText: "Voted NO "
+                    }
+                ]
+            },
+            {
+                key: "hr9495_458",
+                googleSheetIndex: 152,
+                info: "on 'IRS Weaponization Act' (HR. 6408/9495, which would give Treasury Sec. power to revoke status of nonprofits on mere assertion of involvement with terrorism) in mid-Nov suspension vote.",
+                url: "https://clerk.house.gov/Votes/2024458",
+                scoring: [
+                    {
+                        value: "Yes",
+                        score: -2,
+                        addText: "Voted YES "
+                    },
+                    {
+                        value: "No",
+                        score: 2,
+                        addText: "Voted NO "
+                    }
+                ]
+            },
+            {
+                key: "hr9495_477",
+                googleSheetIndex: 153,
+                info: "on 'IRS Weaponization Act' (HR. 6408/9495, which would give Treasury Sec. power to revoke status of nonprofits on mere assertion of involvement with terrorism) in mid-Nov vote on final passage.",
+                url: "https://clerk.house.gov/Votes/2024477",
+                scoring: [
+                    {
+                        value: "Yes",
+                        score: -1,
+                        addText: "Voted YES "
+                    },
+                    {
+                        value: "No",
+                        score: 1,
+                        addText: "Voted NO "
+                    }
+                ]
+            },
         ]
     },
 }
