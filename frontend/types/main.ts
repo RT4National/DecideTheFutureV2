@@ -1,4 +1,5 @@
 export interface PoliticianData {
+    [key: string]: any;
     first_name: string;
     last_name: string;
     active: string;
