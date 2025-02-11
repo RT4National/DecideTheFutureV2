@@ -163,7 +163,14 @@ export const processPolitician = (entry: never) => {
         hr4639: entry[150],
         hr6408: entry[151],
         hr9495_458: entry[152],
-        hr9495_477: entry[153]
+        hr9495_477: entry[153],
+        s1409_hr7891: entry[154],
+        hr8818: entry[155],
+        hr5403: entry[156],
+        s2074_hr4250: entry[157],
+        s2576: entry[158],
+        s4869: entry[159],
+        s1524: entry[160],
     };
 
     const scoring = doScore(politician);
