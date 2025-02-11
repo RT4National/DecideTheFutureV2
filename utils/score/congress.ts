@@ -78,7 +78,7 @@ export const Congress: { [key: string]: CongressData} = {
                 ]
             },
             {
-                key: "usa_freedom_prior_to_20140518", // need to compare organization
+                key: "usa_freedom_prior_to_20140518", // needs to compare organization
                 googleSheetIndex: 30,
                 display: "Sponsored or cosponsored USA FREEDOM 2014 prior to 2014-05-18 (Yes=+3)*Before this date, USA FREEDOM was a substantially stronger piece of legislation, meriting +2 rather than +1.",
                 info: "Supported the original USA Freedom Act (prior to May 18th, 2014)",
@@ -1095,6 +1095,7 @@ export const Congress: { [key: string]: CongressData} = {
                     }
                 ]
             },
+            // needs to be check. info doesn't match with description of content (url)
             {
                 key: "s1409",
                 googleSheetIndex: 127,
@@ -1517,6 +1518,136 @@ export const Congress: { [key: string]: CongressData} = {
                     }
                 ]
             },
+            {
+                key: "s1409_hr7891", // need to compare organization
+                googleSheetIndex: 154,
+                display: "Cosponsored Kids' Online Safety Act, which would mandate age verification on social media sites and thereby harm all users' privacy.(YES=-3)",
+                info: "Supported Kids' Online Safety Act, which would mandate age verification on social media sites and thereby harm all users' privacy.",
+                url: "",
+                scoring: [
+                    {   
+                        value: "YES",
+                        organization: "Senate",
+                        score: -3,
+                        url: "https://www.congress.gov/bill/118th-congress/senate-bill/1409/cosponsors"
+                    },
+                    {
+                        value: "YES",
+                        organization: "House",
+                        score: -3,
+                        url: "https://www.congress.gov/bill/118th-congress/house-bill/7891/cosponsors"
+                    }
+                ]
+            },
+            {
+                key: "hr8818",
+                googleSheetIndex: 155,
+                display: "Cosponsored Americans' Privacy Rights Act, a good general commercial privacy bill. (Yes=+4)",
+                info: "Supported Americans' Privacy Rights Act, a good general commercial privacy bill",
+                url: "https://www.congress.gov/bill/118th-congress/house-bill/8818/cosponsors",
+                scoring: [
+                    {
+                        value: "YES",
+                        score: +4
+                    }
+                ]
+            },
+            {
+                key: "hr5403",
+                googleSheetIndex: 156,
+                info: "on Anti-CBDC Surveillance State Act, prohibiting executive branch from creating a programmable central bank digital currency, which would gravely harm financial privacy.",
+                url: "https://clerk.house.gov/Votes/2024230",
+                scoring: [
+                    {
+                        value: "AYE",
+                        score: 4,
+                        addText: "Voted YES "
+                    },
+                    {
+                        value: "NO",
+                        score: -4,
+                        addText: "Voted NO "
+                    }
+                ]
+            },
+            {
+                key: "s2074_hr4250", // need to compare organization
+                googleSheetIndex: 157,
+                display: "Cosponsored the PRESS Act, which would protect journalists from government surveillance.(YES=+4)",
+                info: "Supported the PRESS Act, which would protect journalists from government surveillance.",
+                url: "",
+                scoring: [
+                    {   
+                        value: "YES",
+                        organization: "Senate",
+                        score: +4,
+                        url: "https://www.congress.gov/bill/118th-congress/senate-bill/2074/cosponsors"
+                    },
+                    {
+                        value: "YES",
+                        organization: "House",
+                        score: +4,
+                        url: "https://www.congress.gov/bill/118th-congress/house-bill/4250/cosponsors"
+                    }
+                ]
+            },
+            {
+                key: "s2576",
+                googleSheetIndex: 158,
+                display: "Cosponsored the Fourth Amendment is Not For Sale Act in the Senate, which would require government agencies to get a warrant when purchasing datasets containing info on U. S. persons that would need a warrant if acquired directly. (Yes=+5)",
+                info: "Supported the Fourth Amendment is Not For Sale Act in the Senate, which would require government agencies to get a warrant when purchasing datasets containing info on U. S. persons that would need a warrant if acquired directly.",
+                url: "https://www.congress.gov/bill/118th-congress/senate-bill/2576/cosponsors",
+                scoring: [
+                    {
+                        value: "YES",
+                        score: +5
+                    }
+                ]
+            },
+            {
+                key: "s4869",
+                googleSheetIndex: 159,
+                display: "Cosponsored the 2022-23 Saving Privacy Act, which would have updated the thresholds for reporting to FINCen under the Bank Secrecy Act in line with inflation, reducing warrantless financial surveillance. (Yes=+4)",
+                info: "Supported the 2022-23 Saving Privacy Act, which would have updated the thresholds for reporting to FINCen under the Bank Secrecy Act in line with inflation, reducing warrantless financial surveillance.",
+                url: "https://www.congress.gov/bill/117th-congress/senate-bill/4869/cosponsors",
+                scoring: [
+                    {
+                        value: "YES",
+                        score: +4
+                    }
+                ]
+            },
+            {
+                key: "s1524",
+                googleSheetIndex: 160,
+                display: "Cosponsored the Expanding Whistle blower Protections for Contractors Act, to prevent government retaliation against whistle blowers. (Yes=+4)",
+                info: "Supported the Expanding Whistle blower Protections for Contractors Act, to prevent government retaliation against whistle blowers.",
+                url: "https://www.congress.gov/bill/118th-congress/senate-bill/1524/cosponsors",
+                scoring: [
+                    {
+                        value: "YES",
+                        score: +4
+                    }
+                ]
+            },
         ]
     },
+
+    // "119th": {
+    //     date: "2025-24",
+    //     rules: [
+    //         {
+    //             key: "s686",
+    //             googleSheetIndex: 125,
+    //             info: "Cosponsored or voted for the RESTRICT Act, which would give expansive authority to the US government to ban apps on national security grounds, seize phones used to access them, and impose criminal penalties for using VPNs to access them.",
+    //             url: "https://www.congress.gov/bill/118th-congress/senate-bill/686/cosponsors",
+    //             scoring: [
+    //                 {
+    //                     value: "Yes",
+    //                     score: -2
+    //                 }
+    //             ]
+    //         },
+    //     ]
+    // }
 }
