@@ -171,6 +171,8 @@ export const processPolitician = (entry: never) => {
         s2576: entry[158],
         s4869: entry[159],
         s1524: entry[160],
+        s_5: entry[161],
+        hr32: entry[162],
     };
 
     const scoring = doScore(politician);
