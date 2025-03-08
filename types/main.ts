@@ -160,7 +160,7 @@ export interface PoliticianData {
     hr9495_458: string;
     hr9495_477: string;
     // s1409: string;
-    hr7891: string;
+    // hr7891: string;
     hr8818: string;
     hr5403: string;
     s2074_hr4250: string;
