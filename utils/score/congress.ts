@@ -1468,7 +1468,7 @@ export const Congress: { [key: string]: CongressData} = {
                 key: "hr6408",
                 googleSheetIndex: 151,
                 info: "on 'IRS Weaponization Act' (HR. 6408/9495, which would give Treasury Sec. power to revoke status of nonprofits on mere assertion of involvement with terrorism) in April.",
-                url: "",
+                url: "https://www.congress.gov/bill/118th-congress/house-bill/6408/all-actions?overview=closed&q=%7B%22roll-call-vote%22%3A%22all%22%7D",
                 scoring: [
                     {
                         value: "Yes",
@@ -1523,7 +1523,7 @@ export const Congress: { [key: string]: CongressData} = {
                 googleSheetIndex: 154,
                 display: "Cosponsored Kids' Online Safety Act, which would mandate age verification on social media sites and thereby harm all users' privacy.(YES=-3)",
                 info: "Supported Kids' Online Safety Act, which would mandate age verification on social media sites and thereby harm all users' privacy.",
-                url: "",
+                url: "X",
                 scoring: [
                     {   
                         value: "YES",
@@ -1575,7 +1575,7 @@ export const Congress: { [key: string]: CongressData} = {
                 googleSheetIndex: 157,
                 display: "Cosponsored the PRESS Act, which would protect journalists from government surveillance.(YES=+4)",
                 info: "Supported the PRESS Act, which would protect journalists from government surveillance.",
-                url: "",
+                url: "X",
                 scoring: [
                     {   
                         value: "YES",
@@ -1633,21 +1633,57 @@ export const Congress: { [key: string]: CongressData} = {
         ]
     },
 
-    // "119th": {
-    //     date: "2025-24",
-    //     rules: [
-    //         {
-    //             key: "s686",
-    //             googleSheetIndex: 125,
-    //             info: "Cosponsored or voted for the RESTRICT Act, which would give expansive authority to the US government to ban apps on national security grounds, seize phones used to access them, and impose criminal penalties for using VPNs to access them.",
-    //             url: "https://www.congress.gov/bill/118th-congress/senate-bill/686/cosponsors",
-    //             scoring: [
-    //                 {
-    //                     value: "Yes",
-    //                     score: -2
-    //                 }
-    //             ]
-    //         },
-    //     ]
-    // }
+    "119th": {
+        date: "2025-24",
+        rules: [
+            {
+                key: "hr32",
+                googleSheetIndex: 162,
+                info: "Cosponsored No Bailout For Sanctuary Cities Act, which unconstitutionally coerces states and cities into cooperating with federal immigration raids",
+                url: "https://www.congress.gov/bill/119th-congress/house-bill/32/cosponsors",
+                scoring: [
+                    {
+                        value: "YEA",
+                        score: -1
+                    }
+                ]
+            },
+            {
+                key: "s_5", // need to compare organization
+                googleSheetIndex: 161,
+                info: "Laken-Riley Act, which requires DHS to detain persons unlawfully present in the US based only on charges, not convictions, for minor crimes",
+                url: "X",
+                scoring: [
+                    {   
+                        value: "Yea",
+                        organization: "Senate",
+                        score: -4,
+                        addText: "Voted for ",
+                        url: "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00007.htm"
+                    },
+                    {   
+                        value: "Nay",
+                        organization: "Senate",
+                        score: +4,
+                        addText: "Voted against ",
+                        url: "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00007.htm"
+                    },
+                    {
+                        value: "Yea",
+                        organization: "House",
+                        score: -4,
+                        addText: "Voted for ",
+                        url: "https://clerk.house.gov/Votes/202523"
+                    },
+                    {
+                        value: "Nay",
+                        organization: "House",
+                        score: +4,
+                        addText: "Voted against ",
+                        url: "https://clerk.house.gov/Votes/202523"
+                    }
+                ]
+            },
+        ]
+    }
 }
