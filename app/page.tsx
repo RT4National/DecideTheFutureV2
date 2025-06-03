@@ -7,7 +7,7 @@ import "../styles/index.scss";
 
 export default function Home() {
     const [tweetText, setTweetText] = useState(
-        "Congress is considering this year whether to renew the government's mass surveillance powers, including Section 702 of FISA. This power has been abused for years to violate our privacy rights. Please vote for bills to rein in government surveillance in 2023!"
+        "Congress is considering whether to renew the government's mass surveillance powers, including Section 702 of FISA, by April 2026. This power has been abused for years to violate our privacy rights. Please vote for bills to rein in government surveillance!"
     );
     return (
         <>
@@ -46,9 +46,7 @@ export default function Home() {
                 </div>
                 <a
                     className="tweet"
-                    href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
-                        "Congress is considering this year whether to renew the government's mass surveillance powers, including Section 702 of FISA. This power has been abused for years to violate our privacy rights [link to: https://restorethe4th.com/wp-content/uploads/2023/03/Sec.-702-Violations-Handout.pdf]. Please vote for bills to rein in government surveillance in 2023!"
-                    )}`}
+                    href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetText)}`}
                 >
                     <Image src="/images/share/tw_white.png" alt="Tweet your Senators" width={38} height={38} />
                     Tweet your Senators
@@ -171,12 +169,12 @@ export default function Home() {
                         </a>
                     </p>
                     <p>
-                        <a href="tel://1-781-258-2936" className="text">
-                            781-258-2936
+                        <a href="tel://1-617-208-9002" className="text">
+                        617-208-9002
                         </a>{" "}
                         <em>or</em>{" "}
-                        <a href="mailto:chair@restorethe4th.com" className="text">
-                            chair@restorethe4th.com
+                        <a href="mailto:stephen@restorethe4th.com" className="text">
+                        stephen@restorethe4th.com
                         </a>
                     </p>
                     <p>
