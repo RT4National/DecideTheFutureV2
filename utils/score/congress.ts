@@ -1522,7 +1522,7 @@ export const Congress: { [key: string]: CongressData} = {
                 key: "s1409_hr7891", // need to compare organization
                 googleSheetIndex: 154,
                 display: "Cosponsored Kids' Online Safety Act, which would mandate age verification on social media sites and thereby harm all users' privacy.(YES=-3)",
-                info: "Supported Kids' Online Safety Act, which would mandate age verification on social media sites and thereby harm all users' privacy.",
+                info: "Cosponsored Kids' Online Safety Act, which would mandate age verification on social media sites and thereby harm all users' privacy.",
                 url: "X",
                 scoring: [
                     {   
@@ -1543,7 +1543,7 @@ export const Congress: { [key: string]: CongressData} = {
                 key: "hr8818",
                 googleSheetIndex: 155,
                 display: "Cosponsored Americans' Privacy Rights Act, a good general commercial privacy bill. (Yes=+4)",
-                info: "Supported Americans' Privacy Rights Act, a good general commercial privacy bill",
+                info: "Cosponsored Americans' Privacy Rights Act, a good general commercial privacy bill",
                 url: "https://www.congress.gov/bill/118th-congress/house-bill/8818/cosponsors",
                 scoring: [
                     {
@@ -1574,7 +1574,7 @@ export const Congress: { [key: string]: CongressData} = {
                 key: "s2074_hr4250", // need to compare organization
                 googleSheetIndex: 157,
                 display: "Cosponsored the PRESS Act, which would protect journalists from government surveillance.(YES=+4)",
-                info: "Supported the PRESS Act, which would protect journalists from government surveillance.",
+                info: "Cosponsored the PRESS Act, which would protect journalists from government surveillance.",
                 url: "X",
                 scoring: [
                     {   
@@ -1595,7 +1595,7 @@ export const Congress: { [key: string]: CongressData} = {
                 key: "s2576",
                 googleSheetIndex: 158,
                 display: "Cosponsored the Fourth Amendment is Not For Sale Act in the Senate, which would require government agencies to get a warrant when purchasing datasets containing info on U. S. persons that would need a warrant if acquired directly. (Yes=+5)",
-                info: "Supported the Fourth Amendment is Not For Sale Act in the Senate, which would require government agencies to get a warrant when purchasing datasets containing info on U. S. persons that would need a warrant if acquired directly.",
+                info: "Cosponsored the Fourth Amendment is Not For Sale Act in the Senate, which would require government agencies to get a warrant when purchasing datasets containing info on U. S. persons that would need a warrant if acquired directly.",
                 url: "https://www.congress.gov/bill/118th-congress/senate-bill/2576/cosponsors",
                 scoring: [
                     {
@@ -1608,7 +1608,7 @@ export const Congress: { [key: string]: CongressData} = {
                 key: "s4869",
                 googleSheetIndex: 159,
                 display: "Cosponsored the 2022-23 Saving Privacy Act, which would have updated the thresholds for reporting to FINCen under the Bank Secrecy Act in line with inflation, reducing warrantless financial surveillance. (Yes=+4)",
-                info: "Supported the 2022-23 Saving Privacy Act, which would have updated the thresholds for reporting to FINCen under the Bank Secrecy Act in line with inflation, reducing warrantless financial surveillance.",
+                info: "Cosponsored the 2022-23 Saving Privacy Act, which would have updated the thresholds for reporting to FINCen under the Bank Secrecy Act in line with inflation, reducing warrantless financial surveillance.",
                 url: "https://www.congress.gov/bill/117th-congress/senate-bill/4869/cosponsors",
                 scoring: [
                     {
@@ -1621,7 +1621,7 @@ export const Congress: { [key: string]: CongressData} = {
                 key: "s1524",
                 googleSheetIndex: 160,
                 display: "Cosponsored the Expanding Whistle blower Protections for Contractors Act, to prevent government retaliation against whistle blowers. (Yes=+4)",
-                info: "Supported the Expanding Whistle blower Protections for Contractors Act, to prevent government retaliation against whistle blowers.",
+                info: "Cosponsored the Expanding Whistle blower Protections for Contractors Act, to prevent government retaliation against whistle blowers.",
                 url: "https://www.congress.gov/bill/118th-congress/senate-bill/1524/cosponsors",
                 scoring: [
                     {
