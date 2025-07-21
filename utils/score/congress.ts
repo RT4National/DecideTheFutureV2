@@ -1649,7 +1649,7 @@ export const Congress: { [key: string]: CongressData} = {
                 ]
             },
             {
-                key: "s_5", // need to compare organization
+                key: "s_5",
                 googleSheetIndex: 161,
                 info: "Laken-Riley Act, which requires DHS to detain persons unlawfully present in the US based only on charges, not convictions, for minor crimes",
                 url: "X",
