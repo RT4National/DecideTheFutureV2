@@ -1571,7 +1571,7 @@ export const Congress: { [key: string]: CongressData} = {
                 ]
             },
             {
-                key: "s2074_hr4250", // need to compare organization
+                key: "s2074_hr4250",
                 googleSheetIndex: 157,
                 display: "Cosponsored the PRESS Act, which would protect journalists from government surveillance.(YES=+4)",
                 info: "Cosponsored the PRESS Act, which would protect journalists from government surveillance.",
@@ -1649,7 +1649,7 @@ export const Congress: { [key: string]: CongressData} = {
                 ]
             },
             {
-                key: "s_5", // need to compare organization
+                key: "s_5",
                 googleSheetIndex: 161,
                 info: "Laken-Riley Act, which requires DHS to detain persons unlawfully present in the US based only on charges, not convictions, for minor crimes",
                 url: "X",
