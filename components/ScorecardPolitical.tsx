@@ -15,6 +15,7 @@ interface Props {
     membership?: MemberShipValue;
     party?: string;
     candidacy?: string;
+    formerMembers?: string;
 }
 
 interface PoliticiansByCategory {
@@ -29,6 +30,7 @@ export const ScorecardPolitical: FC<Props> = ({
     membership: initialMembership = 'All',
     party: initialParty = 'All',
     candidacy: initialCandidacy = 'All',
+    formerMembers: initialFormerMembers = 'Current Members',
 }) => {
     const [good, setGood] = useState<number>(0);
     const [goodFiltered, setGoodFiltered] = useState<PoliticianData[]>([]);
@@ -47,17 +49,30 @@ export const ScorecardPolitical: FC<Props> = ({
     const [membership, setMembership] = useState<MemberShipValue>(initialMembership);
     const [party, setParty] = useState<string>(initialParty);
     const [candidacy, setCandidacy] = useState<string>(initialCandidacy);
+    const [formerMembers, setFormerMembers] = useState<string>(initialFormerMembers);
     const matchPolitician = useCallback((politician: PoliticianData) => {
         const filteredValue = filtered;
         const nameValue = name.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
         const membershipValue = membership;
         const partyValue = party;
         const candidacyValue = candidacy;
+        const formerMembersValue = formerMembers;
 
         const politicianName = (politician.first_name + ' ' + politician.last_name)
             .toLowerCase()
             .normalize("NFD")
             .replace(/[\u0300-\u036f]/g, "");
+
+        // Handle former members filter
+        if (formerMembersValue === 'Former Members') {
+            if (politician.alive !== 'Yes' || politician.active !== 'No') {
+                return false;
+            }
+        } else if (formerMembersValue === 'Current Members') {
+            if (politician.alive !== 'Yes' || politician.active === 'No') {
+                return false;
+            }
+        }
 
         return (
             (
@@ -79,7 +94,7 @@ export const ScorecardPolitical: FC<Props> = ({
                 politician.candidacy === candidacyValue
             )
         );
-    }, [filtered, name, membership, party, candidacy]);
+    }, [filtered, name, membership, party, candidacy, formerMembers]);
 
     const processPoliticiansData = useCallback((entries: never[]) => {
         const politicians: PoliticiansByCategory = { good: [], neutral: [], bad: [] };
@@ -87,7 +102,9 @@ export const ScorecardPolitical: FC<Props> = ({
 
         for (const entry of entries.slice(1)) {
             const politician = processPolitician(entry);
-            if (politician.active !== 'No' && politician.voting !== 'Yes') {
+            // Include both current members and former members who are still alive
+            if ((politician.active !== 'No' && politician.voting !== 'Yes') || 
+                (politician.alive === 'Yes' && politician.active === 'No')) {
                 if (politician.score > 5) {
                     politicians.good.push(politician);
                 } else if (politician.score >= 0) {
@@ -152,7 +169,7 @@ export const ScorecardPolitical: FC<Props> = ({
     // Re-apply filters when filtering parameters change
     useEffect(() => {
         applyFilters();
-    }, [applyFilters, filtered, name, membership, party, candidacy]);
+    }, [applyFilters, filtered, name, membership, party, candidacy, formerMembers]);
 
     const updateUrl = useCallback(() => {
         const filters: string[] = [];
@@ -162,6 +179,7 @@ export const ScorecardPolitical: FC<Props> = ({
         if (membership) filters.push("membership=" + membership);
         if (party) filters.push("party=" + party);
         if (candidacy) filters.push("candidacy=" + candidacy);
+        if (formerMembers) filters.push("formerMembers=" + formerMembers);
 
         const query = filters.length > 0 ? '?' + filters.join('&') : '';
         window.history.pushState(
@@ -169,7 +187,7 @@ export const ScorecardPolitical: FC<Props> = ({
             'Decide The Future',
             window.location.origin + query
         );
-    }, [filtered, name, membership, party, candidacy]);
+    }, [filtered, name, membership, party, candidacy, formerMembers]);
 
     useEffect(() => {
         updateUrl();
@@ -198,6 +216,8 @@ export const ScorecardPolitical: FC<Props> = ({
             setParty(value);
         } else if (field === 'candidacy') {
             setCandidacy(value);
+        } else if (field === 'formerMembers') {
+            setFormerMembers(value);
         }
     };
 
@@ -278,6 +298,21 @@ export const ScorecardPolitical: FC<Props> = ({
                         <option value='Yes'>Running</option>
                         <option value=''>Not Running</option>
                     </select>
+                </div>
+                <div style={{ marginTop: '15px' }}>
+                    <label>Member Status:</label>
+                    <select
+                        className='membership'
+                        style={{ maxWidth: '300px' }}
+                        onChange={e => handleFilterChange(e.target.value, 'formerMembers')}
+                        value={formerMembers}
+                    >
+                        <option value='Current Members'>Current Members</option>
+                        <option value='Former Members'>Former Members (Living)</option>
+                    </select>
+                    <div style={{ fontSize: '12px', color: '#666', marginTop: '5px' }}>
+                        Note: Former Members filter only includes living former members as of the last update.
+                    </div>
                 </div>
                 <div style={{ marginTop: '15px' }}>
                     <label>Politician Name:</label>
