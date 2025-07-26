@@ -3,6 +3,7 @@ export interface PoliticianData {
     first_name: string;
     last_name: string;
     active: string;
+    alive: string;
     voting: string;
     organization: string;
     candidacy: string;
