@@ -3,5 +3,5 @@ export const COMMITTEES = {
     judiciary: 'Judiciary',
     homelandsecurity: 'Homeland Security',
     armedservices: 'Armed Services',
-    weaponization: 'Weaponization'
+    // weaponization: 'Weaponization'
 }
